@@ -1,0 +1,782 @@
+-- phpMyAdmin SQL Dump
+-- version 4.6.4
+-- https://www.phpmyadmin.net/
+--
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 20-04-2019 a las 15:01:27
+-- Versión del servidor: 5.7.14
+-- Versión de PHP: 5.6.25
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de datos: `test_empleados`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `empleados`
+--
+
+CREATE TABLE `empleados` (
+  `id` int(11) NOT NULL,
+  `no_colaborador` int(11) DEFAULT NULL,
+  `nombre` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL,
+  `fecha_asignacion` datetime DEFAULT NULL,
+  `departamento` varchar(50) DEFAULT NULL,
+  `sexo` varchar(15) DEFAULT NULL,
+  `area_locker` varchar(50) DEFAULT NULL,
+  `no_locker` int(11) DEFAULT NULL,
+  `observaciones` varchar(200) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `empleados`
+--
+
+INSERT INTO `empleados` (`id`, `no_colaborador`, `nombre`, `fecha_asignacion`, `departamento`, `sexo`, `area_locker`, `no_locker`, `observaciones`) VALUES
+(1, 10905, 'GUTIERREZ NU~EZ JOSE ANTONIO ', '2019-04-07 01:06:16', 'Animacion', 'Masculino', 'Animacion', 428, 'No comparte locker'),
+(2, 7921, 'CALDERA MARTINEZ DANIEL', '2019-04-05 12:19:14', 'Animacion', 'Masculino', 'Animacion', 429, 'No comparte locker'),
+(3, 7467, 'OLVERA CORONA SERGIO ARMANDO', '2019-04-05 12:24:47', 'Animacion', 'Masculino', 'Animacion', 430, 'No comparte locker'),
+(4, 441, 'LOPEZ OLAF VICTOR', '2019-04-05 12:26:11', 'Animacion', 'Masculino', 'Animacion', 432, 'No comparte locker'),
+(5, 7992, 'ANGELES BAUTISTA MAGALI', '2019-04-05 18:23:40', 'Animacion', 'Femenino', 'Animacion', 433, 'No comparte locker'),
+(6, 0, 'CONTINE PREMIOS DE ANIMACION', '2019-04-07 00:51:47', 'Animacion', 'Femenino', 'Animacion', 434, 'Contiene premios de animacion.'),
+(7, 10959, 'GALVAN MORENO LUIS ANDRES', '2019-04-07 01:06:49', 'Animacion', 'Masculino', 'Animacion', 437, 'No comparte locker'),
+(8, 44100, 'CONTIENE JUEGOS DE ANIMACION', '2019-04-07 01:05:41', 'Animacion', 'Masculino', 'Animacion', 439, 'Este locker contiene los juegos de animacion.'),
+(9, 2115, 'DZIB TZEL LORENZO EPIFANIO', '2019-04-08 02:21:34', 'Servicio', 'Masculino', 'Asiana', 440, 'No comparte locker Codigo 992'),
+(10, 8840, 'PEBA REJON FRANCISCO FIDEL', '2019-04-08 02:22:36', 'Servicio', 'Masculino', 'Asiana', 441, 'No comparte locker codigo 385'),
+(11, 2287, 'CASRILLERA MEDINA JAIME', '2019-04-08 02:23:38', 'Servicio', 'Masculino', 'Asiana', 442, 'No comparte locker codigo 338'),
+(12, 7754, 'CU CARILLO YARET', '2019-04-08 02:24:18', 'Servicio', 'Masculino', 'Asiana', 443, 'No comparte locker codigo 706'),
+(13, 7747, 'MORALES ESPA~A MAXIMILIANO', '2019-04-08 02:24:56', 'Servicio', 'Masculino', 'Asiana', 444, 'No comparte locker codigo 50'),
+(14, 1906, 'HERRERA PECH VICTOR MANUEL', '2019-04-08 02:25:30', 'Servicio', 'Masculino', 'Asiana', 445, 'No comparte locker codigo 424'),
+(15, 2290, 'CAAMA~O RODRIGUEZ BORELI', '2019-04-08 02:26:00', 'Servicio', 'Masculino', 'Asiana', 446, 'No comparte locker codigo 382'),
+(16, 2025, 'LARA RUZ JORGE', '2019-04-06 20:14:39', 'Servicio', 'Masculino', 'Asiana', 448, 'No comparte Locker\r\nCodigo 521'),
+(17, 1974, 'RODRIGUEZ SABIDO JOSE ERNESTO	', '2019-04-06 20:22:45', 'Servicio', 'Masculino', 'Asiana', 449, 'No comparte locker\r\ncodigo 876'),
+(18, 2307, 'MONTEJO MENDOZA HECTOR	', '2019-04-06 20:23:54', 'Cocina General', 'Masculino', 'Asiana', 450, 'No comparte locker\r\ncodigo 209'),
+(19, 2176, 'POOT DZIB ROLANDO	', '2019-04-06 20:24:51', 'Cocina General', 'Masculino', 'Asiana', 451, 'No comparte locker\r\ncodigo 404'),
+(20, 2148, 'LIRA FUENTES JOSE EDUARDO	', '2019-04-06 20:26:00', 'Servicio', 'Masculino', 'Asiana', 452, 'No comparte locker\r\ncodigo 203'),
+(21, 6971, 'BALAM DZUL RUDY MANUEL	', '2019-04-06 20:31:26', 'Cocina general', 'Masculino', 'Asiana', 453, 'No comparte locker\r\ncodigo 46'),
+(22, 2267, 'MONTEJO LOPEZ JACINTO 	', '2019-04-06 20:33:11', 'Cocina general', 'Masculino', 'Asiana', 454, 'No comparte locker\r\ncodigo 772'),
+(23, 8111, 'CASTAN FLORES ANA ROSA	', '2019-04-06 20:35:43', 'Cocina general', 'Femenino', 'Asiana', 455, 'No compate locker\r\ncodigo 74'),
+(24, 2216, 'OBIL MALAGA MANUEL	', '2019-04-06 20:41:12', 'Servicio', 'Masculino', 'Asiana', 456, 'No comparte locker\r\ncodigo 612\r\n'),
+(25, 1959, 'CAMILO TAMAY DZUL	', '2019-04-06 20:43:41', 'Servicio', 'Masculino', 'Asiana', 458, 'No comparte locker \r\ncodigo 326\r\n'),
+(26, 7299, 'DE LA CRUZ DOMINGUEZ ABNER ALEXIS	', '2019-04-08 02:30:23', 'Servicio', 'Masculino', 'Asiana', 459, 'No comparte locker codigo 736'),
+(27, 7750, 'RAMIREZ CERVANTES ISRAEL	', '2019-04-08 02:29:45', 'Cocina general', 'Masculino', 'Asiana', 460, 'No comparte locker codigo 914\r\n'),
+(28, 7524, 'AARONIZ RAMOS CARLOS OMAR	', '2019-04-08 02:32:30', 'Servicio', 'Masculino', 'Asiana', 463, 'No comparte locker codigo 391'),
+(29, 1939, 'TUYUB EB DANIEL	', '2019-04-08 02:34:08', 'Servicio', 'Masculino', 'Asiana', 465, 'No comparte locker codigo 250\r\n'),
+(30, 2225, 'MARTIN SULUB RIGOBERTO', '2019-04-08 03:03:50', 'Mantenimiento', 'Masculino', 'Lockers Mantto', 375, '.'),
+(31, 5720, 'RODRIGUEZ MARTINEZ JUAN', '2019-04-08 03:05:12', 'Mantenimiento', 'Masculino', 'Lockers Mantto', 376, '.'),
+(32, 1899, 'COLLI POOL ANGEL EULOGIO', '2019-04-08 03:07:00', 'Mantenimiento', 'Masculino', 'Lockers Mantto', 378, '.'),
+(33, 5381, 'SANCHEZ PEREZ PEDRO LUIS', '2019-04-08 03:08:33', 'Mantenimiento', 'Masculino', 'Lockers Mantto', 379, '.'),
+(34, 6831, 'PACHECO TERRAZAS LUIS ANGEL', '2019-04-08 03:10:09', 'Mantenimiento', 'Masculino', 'Lockers Mantto', 380, '0282 CLAVE'),
+(35, 5562, 'ACOSTA GOMEZ JOSE MANUEL', '2019-04-08 03:11:15', 'Mantenimiento', 'Masculino', 'Lockers Mantto', 381, '.'),
+(36, 2064, 'MONTOYA RUIZ JOSE MANUEL', '2019-04-08 03:12:32', 'Mantenimiento', 'Masculino', 'Lockers Mantto', 382, '.'),
+(37, 2080, 'NAHUAT DZIB GREGORIO', '2019-04-08 03:13:40', 'Mantenimiento', 'Masculino', 'Lockers Mantto', 383, '.'),
+(38, 3137, 'HERNANDEZ FRANCISCO JOSE MANUEL', '2019-04-08 03:15:13', 'Mantenimiento', 'Masculino', 'Lockers Mantto', 384, '.'),
+(39, 9032, 'TUK CHUC PABLO', '2019-04-08 03:16:21', 'Mantenimiento', 'Masculino', 'Lockers Mantto', 385, '.'),
+(40, 1226, 'JIMENEZ VAZQUEZ GENARO', '2019-04-08 03:17:24', 'Mantenimiento', 'Masculino', 'Lockers Mantto', 386, '.'),
+(41, 7453, 'VAZQUEZ MENDEZ ANDRES', '2019-04-08 03:19:08', 'Mantenimiento', 'Masculino', 'Lockers Mantto', 389, '.'),
+(42, 7644, 'GARCIA LOPEZ SILVERIIO', '2019-04-08 03:21:38', 'Mantenimiento', 'Masculino', 'Lockers Mantto', 390, '.'),
+(43, 5817, 'TORAL CARRILLO CRISTIAN', '2019-04-08 03:23:13', 'Mantenimiento', 'Masculino', 'Lockers Mantto', 391, '.'),
+(44, 20049, 'CORNELIO ONTIVEROS FRANCISCO JAVIER', '2019-04-08 03:24:33', 'Mantenimiento', 'Masculino', 'Lockers Mantto', 392, '.'),
+(45, 1952, 'AGUILAR HERNANDEZ JAIME', '2019-04-08 03:25:43', 'Mantenimiento', 'Masculino', 'Lockers Mantto', 393, '.'),
+(46, 2084, 'HERNANDEZ VIDAL BALTAZAR', '2019-04-08 03:26:49', 'Mantenimiento', 'Masculino', 'Lockers Mantto', 394, '.'),
+(47, 20948, 'VELASCO CASTAÃ‘EDA ARTURO', '2019-04-08 03:27:51', 'Mantenimiento', 'Masculino', 'Lockers Mantto', 395, '.'),
+(48, 3509, 'CUPUL ABAN MARCO ANTONIO', '2019-04-08 03:29:01', 'Mantenimiento', 'Masculino', 'Lockers Mantto', 396, '.'),
+(49, 10072, 'MORALES LOPEZ BERNAL', '2019-04-08 03:29:57', 'Mantenimiento', 'Masculino', 'Lockers Mantto', 397, '.'),
+(51, 8085, 'GOMEZ VELAZCO FRANCISCO', '2019-04-08 03:33:28', 'Mantenimiento', 'Masculino', 'Lockers Mantto', 398, '.'),
+(52, 2215, 'MONTALVO ROSALDO MOISES', '2019-04-08 03:38:02', 'Mantenimiento', 'Masculino', 'Lockers Mantto', 399, '.'),
+(53, 9056, 'PEREZ CRUZ ROBERTO', '2019-04-08 03:39:07', 'Mantenimiento', 'Masculino', 'Lockers Mantto', 400, '.'),
+(54, 2306, 'MORALES LARA DANIEL', '2019-04-08 03:40:34', 'Mantenimiento', 'Masculino', 'Lockers Mantto', 401, '.'),
+(55, 10523, 'CRUZ DE LA CRUZ DOMINGO', '2019-04-08 03:41:32', 'Mantenimiento', 'Masculino', 'Lockers Mantto', 402, '.'),
+(56, 8256, 'TEJERO SANTOS MANUEL', '2019-04-08 03:42:27', 'Mantenimiento', 'Masculino', 'Lockers Mantto', 403, '.'),
+(57, 1987, 'RAMIREZ GARCIA ALFREDO', '2019-04-08 03:45:11', 'Mantenimiento', 'Masculino', 'Lockers Mantto', 404, '.'),
+(58, 3334, 'NOVELO SALAZAR ALFREDO', '2019-04-08 03:47:32', 'Mantenimiento', 'Masculino', 'Lockers Mantto', 406, ','),
+(59, 2385, 'MARTINEZ ZACARIAS TEODORO', '2019-04-08 03:49:11', 'Mantenimiento', 'Masculino', 'Lockers Mantto', 407, ','),
+(60, 1945, 'NAVA GUTIERREZ FERNANDO DE JESUS', '2019-04-08 03:51:20', 'Mantenimiento', 'Masculino', 'Lockers Mantto', 408, '.'),
+(61, 2193, 'DIAZ PELAEZ IVAN', '2019-04-08 03:52:34', 'Mantenimiento', 'Masculino', 'Lockers Mantto', 409, '.'),
+(62, 2242, 'CABALLERO ADAME AMADEO', '2019-04-08 03:53:45', 'Mantenimiento', 'Masculino', 'Lockers Mantto', 410, '.'),
+(63, 1917, 'CUEVAS LICEAS FRANCISCO', '2019-04-08 03:55:01', 'Mantenimiento', 'Masculino', 'Lockers Mantto', 411, '.'),
+(64, 2014, 'JUAREZ VAZQUEZ SIMON', '2019-04-08 03:56:11', 'Mantenimiento', 'Masculino', 'Lockers Mantto', 412, '.'),
+(65, 1967, 'REYES MORALES DORILIAN', '2019-04-08 03:58:33', 'Mantenimiento', 'Masculino', 'Lockers Mantto', 414, '.'),
+(66, 10687, 'LARA GARCIA OSCAR ARMANDO', '2019-04-08 04:00:09', 'Mantenimiento', 'Masculino', 'Lockers Mantto', 415, '.'),
+(67, 20946, 'CEBALLOS AVILA ALEJANDRO', '2019-04-08 04:01:32', 'Mantenimiento', 'Masculino', 'Lockers Mantto', 416, '.'),
+(68, 5565, 'ZEPEDA ESTRADA CARLOS MARIO', '2019-04-08 04:02:45', 'Mantenimiento', 'Masculino', 'Lockers Mantto', 418, '.'),
+(69, 407, 'HOIL COCOM EODOLFO', '2019-04-08 04:04:11', 'Mantenimiento', 'Masculino', 'Lockers Mantto', 419, '.'),
+(70, 11023, 'SEGURA SANCHEZ ANDRES', '2019-04-08 04:05:31', 'Mantenimiento', 'Masculino', 'Lockers Mantto', 420, '.'),
+(71, 2055, 'GUTIERREZ MEDRANO GUDALUPE', '2019-04-08 04:07:01', 'Mantenimiento', 'Masculino', 'Lockers Mantto', 421, '.'),
+(72, 5976, 'BALAM CANUL ROGELIO', '2019-04-08 04:08:06', 'Mantenimiento', 'Masculino', 'Lockers Mantto', 422, '.'),
+(73, 89, 'LOPEZ GARDUÃ‘O ALEJANDRO', '2019-04-08 04:09:45', 'Mantenimiento', 'Masculino', 'Lockers Mantto', 423, '.'),
+(74, 2248, 'CARLOS ANTONIO CASTAÃ‘EDA MUKUL', '2019-04-08 04:11:06', 'Mantenimiento', 'Masculino', 'Lockers Mantto', 424, '.'),
+(75, 10192, 'SEGURA LOPEZ ERICK', '2019-04-08 04:12:31', 'Mantenimiento', 'Masculino', 'Lockers Mantto', 425, '.'),
+(76, 6372, 'CHAVEZ MARTINEZ DOLORES ALFONSO', '2019-04-08 04:13:46', 'Mantenimiento', 'Masculino', 'Lockers Mantto', 426, '.'),
+(77, 2433, 'MARTINEZ CARMONA RAFAEL', '2019-04-08 04:14:53', 'Mantenimiento', 'Masculino', 'Lockers Mantto', 427, '.'),
+(78, 2033, 'PEREZ PEREZ MIGUEL', '2019-04-08 04:26:13', 'Lavanderia', 'Masculino', 'BaÃ±o Hombres', 97, '.'),
+(79, 7994, 'BAUTISTA SANTOS PEDRO', '2019-04-08 04:31:20', 'Cocina general', 'Masculino', 'BaÃ±o Hombres', 99, 'ESTA EN EL 3ER TURNO'),
+(80, 2873, 'LAZCANO VELA RAUL', '2019-04-08 04:32:40', 'Steward', 'Masculino', 'BaÃ±o Hombres', 100, '.'),
+(81, 781, 'PASTOR LOPEZ ALBERTO', '2019-04-08 04:33:49', 'Cocina general', 'Masculino', 'BaÃ±o Hombres', 101, '.'),
+(82, 2233, 'CHI PACHECO EDUARDO JESUS', '2019-04-08 04:34:45', 'Cocina general', 'Masculino', 'BaÃ±o Hombres', 102, '.'),
+(83, 10971, 'DE LA CRUZ RIVERA CARMEN', '2019-04-08 04:35:58', 'Steward', 'Masculino', 'BaÃ±o Hombres', 103, '.'),
+(84, 2234, 'AVILA ROMERO ERICK ISRAEL', '2019-04-08 04:37:08', 'AYB', 'Masculino', 'BaÃ±o Hombres', 104, '.'),
+(85, 2036, 'UUH UUH GABRIEL', '2019-04-08 04:39:10', 'AYB', 'Masculino', 'BaÃ±o Hombres', 105, 'DEPTO DE SERVICIOS'),
+(86, 1941, 'TOTO VENTURA JOSE OCTAVIO', '2019-04-08 04:40:19', 'AYB', 'Masculino', 'BaÃ±o Hombres', 106, 'DEPTO DE SERVICIOS'),
+(87, 1925, 'SAN MARTIN REYNALDO', '2019-04-08 04:41:29', 'AYB', 'Masculino', 'BaÃ±o Hombres', 107, 'DEPTO DE SERVICIOS'),
+(88, 2151, 'ARGUMEDO LEYVA GERARDO', '2019-04-08 04:42:32', 'AYB', 'Masculino', 'BaÃ±o Hombres', 108, 'DEPTO DE SERVICIOS'),
+(89, 1943, 'MOLINA CRUZ FRANCISCO JAVIER', '2019-04-08 04:44:03', 'Mantenimiento', 'Masculino', 'BaÃ±o Hombres', 109, '.'),
+(90, 2217, 'NAHUAT MAY RODOLFO', '2019-04-08 04:45:50', 'Mantenimiento', 'Masculino', 'BaÃ±o Hombres', 110, '.'),
+(91, 20613, 'PEREZ BOLOM ABELARDO', '2019-04-08 04:47:44', 'Ama de llaves', 'Masculino', 'BaÃ±o Hombres', 111, 'COMPARTE LOCKER CON SANCHEZ MENDOZA DARINEL #20384'),
+(92, 3155, 'ALOR GONZALEZ JOSE DEL CARMEN', '2019-04-08 04:48:47', 'Steward', 'Masculino', 'BaÃ±o Hombres', 112, '.'),
+(93, 2410, 'UCAN UC RAYMUNDO', '2019-04-08 04:50:04', 'Steward', 'Masculino', 'BaÃ±o Hombres', 113, '.'),
+(94, 565, 'RICARDEZ MENDEZ RUDY', '2019-04-08 04:51:30', 'Cocina general', 'Masculino', 'BaÃ±o Hombres', 114, '.'),
+(95, 2100, 'PEREZ GOMEZ JOSE LUIS', '2019-04-08 04:52:42', 'Steward', 'Masculino', 'BaÃ±o Hombres', 115, '.'),
+(96, 2005, 'CAMAS RIVEROL WALTER ALONSO', '2019-04-08 04:54:27', 'AYB', 'Masculino', 'BaÃ±o Hombres', 116, 'COMPARTE LOCKER CON TREJO VARGAS JESUS ALEJANDRO #8143'),
+(97, 2138, 'KUMUL ALAMILLA VICTOR FERNANDO', '2019-04-08 04:55:23', 'Steward', 'Masculino', 'BaÃ±o Hombres', 117, '.'),
+(98, 1935, 'ACERO VAQUEZ FERNANDO', '2019-04-08 04:56:13', 'Cocina general', 'Masculino', 'BaÃ±o Hombres', 118, '.'),
+(99, 2246, 'HERNANDEZ SANCHEZ ALEXANDER', '2019-04-08 04:57:20', 'AYB', 'Masculino', 'BaÃ±o Hombres', 119, 'DEPTO DE SERVICIOS'),
+(100, 1996, 'SEGURA JUAN CARLOS', '2019-04-08 04:58:32', 'AYB', 'Masculino', 'BaÃ±o Hombres', 120, 'DEPTO DE SERVICIOS'),
+(101, 2254, 'GONZALEZ CRUZ EFREN', '2019-04-08 04:59:26', 'AYB', 'Masculino', 'BaÃ±o Hombres', 121, 'DEPTO DE SERVICIOS'),
+(102, 2356, 'KANTUN GAMALIEL', '2019-04-08 05:00:31', 'AYB', 'Masculino', 'BaÃ±o Hombres', 122, '.'),
+(103, 2240, 'TUYU YAM RODY', '2019-04-08 05:01:37', 'Cocina general', 'Masculino', 'BaÃ±o Hombres', 123, '.'),
+(104, 2029, 'DE LOS SANTOS LUIS MANUEL', '2019-04-08 05:02:26', 'Bell Boy', 'Masculino', 'BaÃ±o Hombres', 124, '.'),
+(105, 5108, 'BARAHONA TRINIDAD MARCO ANTONIO', '2019-04-08 05:03:30', 'Steward', 'Masculino', 'BaÃ±o Hombres', 125, '.'),
+(106, 6570, 'ROMERO HERNANDEZ LUIS', '2019-04-08 05:06:14', 'Steward', 'Masculino', 'BaÃ±o Hombres', 126, '.'),
+(107, 2003, 'PECH MAY FAUTISNO', '2019-04-08 05:07:10', 'Cocina general', 'Masculino', 'BaÃ±o Hombres', 127, '.'),
+(108, 759, 'ESTRADA CARRERA FERNANDO', '2019-04-08 05:08:50', 'Cocina general', 'Masculino', 'BaÃ±o Hombres', 128, '.'),
+(109, 2011, 'MONTEJO TAMAYO HERBERT JESUS', '2019-04-08 05:10:00', 'Cocina general', 'Masculino', 'BaÃ±o Hombres', 129, '.'),
+(110, 2203, 'DIAZ GONZALES ABRAHAM', '2019-04-08 05:11:00', 'AYB', 'Masculino', 'BaÃ±o Hombres', 130, '.'),
+(111, 381, 'REYES LUING SAMUEL', '2019-04-08 05:12:38', 'SPA', 'Masculino', 'BaÃ±o Hombres', 131, '.'),
+(112, 9065, 'SANCHEZ DELGADO PEDRO', '2019-04-08 05:13:40', 'Steward', 'Masculino', 'BaÃ±o Hombres', 132, '.'),
+(113, 2155, 'CHULIM BATUN LUCIO', '2019-04-08 05:14:38', 'AYB', 'Masculino', 'BaÃ±o Hombres', 133, 'DEPTO DE SERVICIOS'),
+(114, 767, 'CHAN YAM GABRIEL', '2019-04-08 05:16:10', 'Steward', 'Masculino', 'BaÃ±o Hombres', 134, 'COMPARTE LOCKER CON CANUL BENJAMIN'),
+(115, 1955, 'MAY DZUL VICTOR EDMUNDO', '2019-04-08 05:17:11', 'Cocina general', 'Masculino', 'BaÃ±o Hombres', 135, '.'),
+(116, 1916, 'GAMBOA SANCHEZ FRANCISCO', '2019-04-08 05:18:26', 'AYB', 'Masculino', 'BaÃ±o Hombres', 136, 'DEPTO DE SERVICIOS'),
+(117, 2031, 'GOMEZ PEREZ MIGUEL ANGEL', '2019-04-08 05:20:43', 'Steward', 'Masculino', 'BaÃ±o Hombres', 137, '.'),
+(118, 10630, 'MARTINEZ GOMEZ JOSE ALFREDO', '2019-04-08 05:21:47', 'Cocina general', 'Masculino', 'BaÃ±o Hombres', 138, '.'),
+(119, 339, 'CANUL TEC VICTOR', '2019-04-08 05:23:06', 'Areas Publicas', 'Masculino', 'BaÃ±o Hombres', 139, '.'),
+(120, 5719, 'LOPEZ VAZQUEZ VICTOR', '2019-04-08 05:24:04', 'Areas Publicas', 'Masculino', 'BaÃ±o Hombres', 140, '.'),
+(121, 10730, 'HOIL HOIL VICTOR MANUEL', '2019-04-08 05:25:03', 'Ama de llaves', 'Masculino', 'BaÃ±o Hombres', 141, '.'),
+(122, 239, 'MOO CAHUICH MIGUEL ANGEL', '2019-04-08 05:26:14', 'Cocina general', 'Masculino', 'BaÃ±o Hombres', 142, '.'),
+(123, 2045, 'COHUO MAY LUIS ANTONIO', '2019-04-08 05:27:22', 'AYB', 'Masculino', 'BaÃ±o Hombres', 143, 'DEPTO DE SERVICIOS'),
+(124, 582, 'ANTUNEZ REYNA FERNANDO', '2019-04-08 05:29:47', 'AYB', 'Masculino', 'BaÃ±o Hombres', 144, 'CLAVE DE CANDADO 30, 25, 25, 6'),
+(125, 5085, 'MAGAÃ‘A VIRGEN DAVID', '2019-04-08 05:31:19', 'AYB', 'Masculino', 'BaÃ±o Hombres', 145, 'DEPTO DE SERVICIOS'),
+(126, 2184, 'NAVA VAZQUEZ JORGE ALBERTO', '2019-04-08 05:32:31', 'AYB', 'Masculino', 'BaÃ±o Hombres', 146, '.'),
+(127, 2130, 'ARGUMEDO BALDERAS MICHELL', '2019-04-08 05:34:20', 'AYB', 'Masculino', 'BaÃ±o Hombres', 147, 'DEPTO DE SERVICIOS'),
+(128, 2124, 'HUCHIN MOO IOVANI', '2019-04-08 05:38:21', 'AYB', 'Masculino', 'BaÃ±o Hombres', 148, 'CLAVE: 3 VECES EL CERO'),
+(129, 2154, 'HERRERA MISS CARLOS', '2019-04-08 05:46:20', 'AYB', 'Masculino', 'BaÃ±o Hombres', 150, 'DEPTO DE SERVICIOS');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `empleadosespera`
+--
+
+CREATE TABLE `empleadosespera` (
+  `id` int(11) NOT NULL,
+  `no_colaborador` int(11) DEFAULT NULL,
+  `nombre` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL,
+  `fecha` datetime DEFAULT NULL,
+  `departamento` varchar(50) DEFAULT NULL,
+  `observaciones` varchar(200) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `empleadosespera`
+--
+
+INSERT INTO `empleadosespera` (`id`, `no_colaborador`, `nombre`, `fecha`, `departamento`, `observaciones`) VALUES
+(1, 20477, 'HERNANDEZ LOPEZ ADOLFO', '2019-02-05 11:49:59', 'Steward', ' AVISO 1ER LOCKER ASIGNADO 02  1ER.AVISO  07/03/2019'),
+(2, 20671, 'VALERIO CASTILLO REYNA ISABEL', '2019-02-08 11:51:11', 'Cocina General', '1ER. AVISO LOCKER ASIGNADO 58  1ER.AVISO  07/03/2019'),
+(3, 20349, 'JIMENEZ GUTIERREZ DARINEL', '2019-02-15 11:52:07', 'Areas Publicas', '.'),
+(4, 8845, 'SANCHEZ MAYO FABIANA', '2020-02-20 11:53:05', 'Ama de llaves', '.'),
+(5, 4745, 'CAZARES VITAL YANET', '2019-03-05 11:53:55', 'AYB', '.'),
+(6, 20349, 'JIMENEZ GUTIERREZ DANIEL', '2019-03-06 11:54:55', 'Areas Publicas', '.'),
+(7, 2114, 'GARCIA ROSAS ARACELI', '2019-03-08 11:55:45', 'SPA', '.'),
+(8, 20669, 'BALLINA CENTENO MARIA DEL CARMEN\r\n', '2019-03-11 11:56:40', 'Areas Publicas', '.'),
+(9, 10840, 'LEON SASTRE ETNA', '2019-03-11 21:45:09', 'Prevencion', '.'),
+(10, 21112, 'SECUNDINO SURIANO JUAN ANTONIO', '2019-03-15 21:45:50', 'Steward', '.'),
+(11, 2035, 'XIX MUKUL ROBERTO', '2019-03-19 21:46:26', 'Servicio', '.'),
+(12, 21024, 'JAVIER DE LA CRUZ LIZBETH', '2019-03-23 21:47:18', 'Steward', '.'),
+(13, 21184, 'MORALES PINZON MIRIAM GABRIELA', '2019-03-23 21:47:53', 'Cocina General', '.'),
+(14, 3212, 'BARRAGAN PETRONILO JULIA', '2019-03-27 21:48:30', 'AYB', '.'),
+(15, 3508, 'HERNANDEZ YA~EZ MARIANA', '2019-03-29 20:49:08', 'Cocina General', '.');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `lockers`
+--
+
+CREATE TABLE `lockers` (
+  `no_locker` int(11) NOT NULL,
+  `num_locker` varchar(50) DEFAULT NULL,
+  `estado_locker` tinyint(4) DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `lockers`
+--
+
+INSERT INTO `lockers` (`no_locker`, `num_locker`, `estado_locker`) VALUES
+(1, '1-1M', 0),
+(2, '2-2', 0),
+(3, '3-3', 0),
+(4, '4-4', 0),
+(5, '5-5', 0),
+(6, '6-6', 0),
+(7, '7-7', 0),
+(8, '8-8', 0),
+(9, '9-9', 0),
+(10, '10-10', 0),
+(11, '11-11', 0),
+(12, '12-12', 0),
+(13, '13-13', 0),
+(14, '14-14', 0),
+(15, '15-15', 0),
+(16, '16-16', 0),
+(17, '17-17', 0),
+(18, '18-18', 0),
+(19, '19-19', 0),
+(20, '20-20', 0),
+(21, '21-21', 0),
+(22, '22-22', 0),
+(23, '23-23', 0),
+(24, '24-24', 0),
+(25, '25-25', 0),
+(26, '26-26', 0),
+(27, '27-27', 0),
+(28, '28-28', 0),
+(29, '29-29', 0),
+(30, '30-30', 0),
+(31, '31-31', 0),
+(32, '32-32', 0),
+(33, '33-33', 0),
+(34, '34-34', 0),
+(35, '35-35', 0),
+(36, '36-36', 0),
+(37, '37-37', 0),
+(38, '38-38', 0),
+(39, '39-39', 0),
+(40, '40-40', 0),
+(41, '41-41', 0),
+(42, '42-42', 0),
+(43, '43-43', 0),
+(44, '44-44', 0),
+(45, '45-45', 0),
+(46, '46-46', 0),
+(47, '47-47', 0),
+(48, '48-48', 0),
+(49, '50-50', 0),
+(50, '51-51', 0),
+(51, '52-52', 0),
+(52, '53-53', 0),
+(53, '54-54', 0),
+(54, '55-55', 0),
+(55, '56-56', 0),
+(56, '57-57', 0),
+(57, '58-58', 0),
+(58, '59-59', 0),
+(59, '60-60', 0),
+(60, '61-61', 0),
+(61, '62-62', 0),
+(62, '63-63', 0),
+(63, '64-64', 0),
+(64, '65-65', 0),
+(65, '66-66', 0),
+(66, '67-67', 0),
+(67, '68-68', 0),
+(68, '69-69', 0),
+(69, '70-70', 0),
+(70, '71-71', 0),
+(71, '72-72', 0),
+(72, '73-73', 0),
+(73, '74-74', 0),
+(74, '75-75', 0),
+(75, '76-76', 0),
+(76, '77-77', 0),
+(77, '78-78', 0),
+(78, '79-79', 0),
+(79, '80-80', 0),
+(80, '81-81', 0),
+(81, '82-82', 0),
+(82, '83-83', 0),
+(83, '84-84', 0),
+(84, '85-85', 0),
+(85, '86-86', 0),
+(86, '87-87', 0),
+(87, '88-88', 0),
+(88, '89-89', 0),
+(89, '90-90', 0),
+(90, '91-91', 0),
+(91, '92-92', 0),
+(92, '93-93', 0),
+(93, '93-93', 0),
+(94, '94-94', 0),
+(95, '95-95', 0),
+(96, '96-96M', 0),
+(97, '97-1H', 1),
+(98, '98-2', 1),
+(99, '99-3', 1),
+(100, '100-4', 1),
+(101, '101-5', 1),
+(102, '102-6', 1),
+(103, '103-7', 1),
+(104, '104-8', 1),
+(105, '105-9', 1),
+(106, '106-10', 1),
+(107, '107-11', 1),
+(108, '108-12', 1),
+(109, '109-13', 1),
+(110, '110-14', 1),
+(111, '111-15', 1),
+(112, '112-16', 1),
+(113, '113-17', 1),
+(114, '114-18', 1),
+(115, '115-19', 1),
+(116, '116-20', 1),
+(117, '117-21', 1),
+(118, '118-22', 1),
+(119, '119-23', 1),
+(120, '120-24', 1),
+(121, '121-25', 1),
+(122, '122-26', 1),
+(123, '123-27', 1),
+(124, '124-28', 1),
+(125, '125-29', 1),
+(126, '126-30', 1),
+(127, '127-31', 1),
+(128, '128-32', 1),
+(129, '129-33', 1),
+(130, '130-34', 1),
+(131, '131-35', 1),
+(132, '132-36', 1),
+(133, '133-37', 1),
+(134, '134-38', 1),
+(135, '135-39', 1),
+(136, '136-40', 1),
+(137, '137-41', 1),
+(138, '138-42', 1),
+(139, '137-43', 1),
+(140, '140-44', 1),
+(141, '141-45', 1),
+(142, '142-46', 1),
+(143, '143-47', 1),
+(144, '144-48', 1),
+(145, '145-49', 1),
+(146, '146-50', 1),
+(147, '147-51', 1),
+(148, '148-52', 1),
+(149, '148-53', 0),
+(150, '150-54', 1),
+(151, '151-55', 1),
+(152, '152-56', 1),
+(153, '153-57', 1),
+(154, '154-58', 1),
+(155, '155-59', 1),
+(156, '156-60', 1),
+(157, '157-61', 1),
+(158, '158-62', 1),
+(159, '159-63', 1),
+(160, '160-64', 0),
+(161, '161-65', 0),
+(162, '162-66', 0),
+(163, '163-67', 0),
+(164, '164-68', 0),
+(165, '165-69', 0),
+(166, '166-70', 0),
+(167, '167-71', 0),
+(168, '168-72', 0),
+(169, '169-73', 0),
+(170, '170-74', 0),
+(171, '171-75', 0),
+(172, '172-76', 0),
+(173, '173-77', 0),
+(174, '174-78', 0),
+(175, '175-79', 0),
+(176, '176-80', 0),
+(177, '177-81', 0),
+(178, '178-80', 0),
+(179, '179-81', 0),
+(180, '180-82', 0),
+(181, '181-83', 0),
+(182, '182-84', 0),
+(183, '183-85', 0),
+(184, '184-86', 0),
+(185, '185-87', 0),
+(187, '187-89', 0),
+(188, '188-90', 0),
+(189, '189-91', 0),
+(190, '190-92', 0),
+(191, '191-93', 0),
+(192, '192-94', 0),
+(193, '193-95', 0),
+(194, '194-96H', 0),
+(195, '195-98 P', 0),
+(196, '196-99', 0),
+(197, '197-100', 0),
+(198, '198-101', 0),
+(199, '199-102', 0),
+(200, '200-103', 0),
+(201, '201-104', 0),
+(202, '202-105', 0),
+(203, '203-106', 0),
+(204, '204-107', 0),
+(205, '205-108', 0),
+(206, '206-109', 0),
+(207, '207-110', 0),
+(208, '208-111', 0),
+(209, '209-112', 0),
+(210, '210-113', 0),
+(211, '211-114', 0),
+(212, '212-115', 0),
+(213, '213-116', 0),
+(214, '214-117', 0),
+(215, '215-118', 0),
+(216, '216-119', 0),
+(217, '217-120', 0),
+(218, '218-121', 0),
+(219, '219-122', 0),
+(220, '220-123', 0),
+(221, '221-124', 0),
+(222, '222-125', 0),
+(223, '223-126', 0),
+(224, '224-127', 0),
+(225, '225-128', 0),
+(226, '226-129', 0),
+(227, '227-130', 0),
+(228, '228-131', 0),
+(229, '229-132', 0),
+(230, '230-133', 0),
+(231, '231-134', 0),
+(232, '232-135', 0),
+(233, '233-136', 0),
+(234, '234-137', 0),
+(235, '235-138', 0),
+(236, '236-139', 0),
+(237, '237-140', 0),
+(238, '238-141', 0),
+(239, '239-142', 0),
+(240, '240-143', 0),
+(241, '241-144', 0),
+(242, '242-145', 0),
+(243, '243-146', 0),
+(244, '244-147', 0),
+(245, '245-148', 0),
+(246, '246-149', 0),
+(247, '247-150', 0),
+(248, '248-151', 0),
+(249, '249-152', 0),
+(250, '250-153', 0),
+(251, '251-154', 0),
+(252, '252-155', 0),
+(253, '253-156', 0),
+(254, '254-157', 0),
+(255, '255-158', 0),
+(256, '256-159', 0),
+(257, '257-160', 0),
+(258, '258-161', 0),
+(259, '259-162', 0),
+(260, '260-163', 0),
+(261, '261-164', 0),
+(262, '262-165', 0),
+(263, '263-166', 0),
+(264, '264-167', 0),
+(265, '265-168', 0),
+(266, '266-169', 0),
+(267, '267-170', 0),
+(268, '268-171', 0),
+(269, '269-172', 0),
+(270, '270-173', 0),
+(271, '271-174', 0),
+(272, '272-175', 0),
+(273, '273-176', 0),
+(274, '274-177', 0),
+(275, '275-178', 0),
+(276, '276-179', 0),
+(277, '277-180', 0),
+(278, '278-181', 0),
+(279, '279-182', 0),
+(280, '280-183', 0),
+(281, '281-184', 0),
+(282, '282-185', 0),
+(283, '283-186', 0),
+(284, '284-187', 0),
+(285, '285-188', 0),
+(286, '286-189', 0),
+(287, '287-190', 0),
+(288, '288-191', 0),
+(289, '289-192', 0),
+(290, '290-193', 0),
+(291, '291-194', 0),
+(292, '292-195', 0),
+(293, '293-196', 0),
+(294, '294-197P', 0),
+(295, '295-198PS', 0),
+(296, '296-199', 0),
+(297, '297-200', 0),
+(298, '298-201', 0),
+(299, '299-202', 0),
+(300, '300-203', 0),
+(301, '301-204', 0),
+(302, '302-205', 0),
+(303, '303-206', 0),
+(304, '404-207', 0),
+(305, '405-208', 0),
+(306, '306-209', 0),
+(307, '307-210', 0),
+(308, '308-211', 0),
+(309, '309-212', 0),
+(310, '310-213', 0),
+(311, '311-214', 0),
+(312, '312-215', 0),
+(313, '313-216', 0),
+(314, '314-217', 0),
+(315, '315-218', 0),
+(316, '316-219', 0),
+(317, '317-220', 0),
+(318, '318-221', 0),
+(319, '319-222', 0),
+(320, '320-223', 0),
+(321, '321-224', 0),
+(322, '322-225', 0),
+(323, '323-226', 0),
+(324, '324-227', 0),
+(325, '325-228', 0),
+(326, '326-229', 0),
+(327, '327-230', 0),
+(328, '328-231', 0),
+(329, '329-232', 0),
+(330, '330-233', 0),
+(331, '331-234', 0),
+(332, '332-235', 0),
+(333, '333-236', 0),
+(334, '334-237', 0),
+(335, '335-238', 0),
+(336, '336-239', 0),
+(337, '337-240', 0),
+(338, '338-241', 0),
+(339, '339-242', 0),
+(340, '340-243', 0),
+(341, '341-244', 0),
+(342, '342-245', 0),
+(343, '343-246', 0),
+(344, '344-247', 0),
+(345, '345-248', 0),
+(346, '346-249', 0),
+(347, '347-250', 0),
+(348, '348-251', 0),
+(349, '349-252', 0),
+(350, '350-253', 0),
+(351, '351-254', 0),
+(352, '352-255', 0),
+(353, '353-256', 0),
+(354, '454-257', 0),
+(355, '355-258', 0),
+(356, '356-259', 0),
+(357, '357-260', 0),
+(358, '358-261', 0),
+(359, '359-262', 0),
+(360, '360-263', 0),
+(361, '361-264', 0),
+(362, '362-265', 0),
+(363, '363-266', 0),
+(364, '364-267', 0),
+(365, '365-268', 0),
+(366, '366-269', 0),
+(367, '367-270', 0),
+(368, '368-271', 0),
+(369, '369-272', 0),
+(370, '370-273', 0),
+(371, '372-274', 0),
+(372, '372-275', 0),
+(373, '373-276', 0),
+(374, '374-277PS', 0),
+(375, '375-1 MT', 1),
+(376, '376-2', 1),
+(377, '377-3', 0),
+(378, '378-4', 1),
+(379, '379-5', 1),
+(380, '380-6', 1),
+(381, '381-7', 1),
+(382, '382-8', 1),
+(383, '383-9', 1),
+(384, '384-10', 1),
+(385, '385-11', 1),
+(386, '386-12', 1),
+(387, '387-13', 0),
+(388, '388-14', 0),
+(389, '389-15', 1),
+(390, '390-16', 1),
+(391, '391-17', 1),
+(392, '392-18', 1),
+(393, '393-19', 1),
+(394, '394-20', 1),
+(395, '395-21', 1),
+(396, '396-22', 1),
+(397, '397-23', 1),
+(398, '398-24', 1),
+(399, '399-25', 1),
+(400, '400-26', 1),
+(401, '401-27', 1),
+(402, '402-28', 1),
+(403, '403-29', 1),
+(404, '404-30', 1),
+(405, '405-31', 0),
+(406, '407-32', 1),
+(407, '408-33', 1),
+(408, '408-34', 1),
+(409, '409-35', 1),
+(410, '410-36', 1),
+(411, '411-37', 1),
+(412, '412-38', 1),
+(413, '413-38', 0),
+(414, '414-39', 1),
+(415, '415-40', 1),
+(416, '416-41', 1),
+(417, '417-42', 0),
+(418, '418-43', 1),
+(419, '419-44', 1),
+(420, '420-45', 1),
+(421, '421-46', 1),
+(422, '422-47', 1),
+(423, '423-48', 1),
+(424, '424-49', 1),
+(425, '425-50', 1),
+(426, '426-51', 1),
+(427, '427-52 MT', 1),
+(428, '428-1 AN', 1),
+(429, '429-2', 1),
+(430, '430-3', 1),
+(431, '431-4', 0),
+(432, '432-5', 1),
+(433, '433-6', 1),
+(434, '434-7', 0),
+(435, '435-8', 0),
+(436, '436-9', 0),
+(437, '437-10', 1),
+(438, '438-11', 0),
+(439, '439-12AN', 0),
+(440, '440-1AS', 1),
+(441, '441-2', 1),
+(442, '442-3', 1),
+(443, '443-4', 1),
+(444, '444-5', 1),
+(445, '445-6', 1),
+(446, '446-7', 0),
+(447, '447-8', 1),
+(448, '448-9', 1),
+(449, '449-10', 1),
+(450, '450-11', 1),
+(451, '451-12', 1),
+(452, '452-13', 1),
+(453, '453-14', 1),
+(454, '454-15', 1),
+(455, '455-16', 1),
+(456, '456-17', 1),
+(457, '457-18', 0),
+(458, '458-19', 1),
+(459, '459-20', 1),
+(460, '460-21', 1),
+(461, '461-22', 0),
+(462, '462-23', 0),
+(463, '463-24', 1),
+(464, '464-25', 0),
+(465, '465-26', 1),
+(466, '466-27', 0),
+(467, '467-28', 0),
+(468, '468-29', 0),
+(469, '469-30', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `login`
+--
+
+CREATE TABLE `login` (
+  `id` int(10) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `login`
+--
+
+INSERT INTO `login` (`id`, `email`, `password`) VALUES
+(1, 'maria@hiltonpc.com', 'd033e22ae348aeb5660fc2140aec35850c4da997'),
+(2, 'luis@hiltonpc.com', '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8');
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `empleados`
+--
+ALTER TABLE `empleados`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `FK_empleados_lockers` (`no_locker`);
+
+--
+-- Indices de la tabla `empleadosespera`
+--
+ALTER TABLE `empleadosespera`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `lockers`
+--
+ALTER TABLE `lockers`
+  ADD PRIMARY KEY (`no_locker`);
+
+--
+-- Indices de la tabla `login`
+--
+ALTER TABLE `login`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `empleados`
+--
+ALTER TABLE `empleados`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=130;
+--
+-- AUTO_INCREMENT de la tabla `empleadosespera`
+--
+ALTER TABLE `empleadosespera`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+--
+-- AUTO_INCREMENT de la tabla `lockers`
+--
+ALTER TABLE `lockers`
+  MODIFY `no_locker` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=470;
+--
+-- AUTO_INCREMENT de la tabla `login`
+--
+ALTER TABLE `login`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `empleados`
+--
+ALTER TABLE `empleados`
+  ADD CONSTRAINT `FK_empleados_lockers` FOREIGN KEY (`no_locker`) REFERENCES `lockers` (`no_locker`);
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
